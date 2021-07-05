@@ -1,0 +1,16 @@
+{
+  "name": "pizza",
+  "version": "1.0.0",
+  "description": "pizza web site using mern",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mabrouka khalfa",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2"
+  }
+}
