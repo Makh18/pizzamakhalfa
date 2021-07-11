@@ -3,14 +3,37 @@
   "version": "1.0.0",
   "description": "pizza web site using mern",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start  --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Mabrouka khalfa",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.13.2"
+    "express-async-handler": "^1.1.4",
+    "express-handlebars": "^5.3.2",
+    "express-handler": "^0.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.2",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.6.2",
+    "react-helmet": "^6.1.0",
+    "react-paypal-button-v2": "^2.6.3",
+    "react-router-bootstrap": "^0.25.0",
+    "react-use": "^17.2.4"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.9"
   }
 }
