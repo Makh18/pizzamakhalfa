@@ -4,6 +4,9 @@
   "description": "pizza web site using mern",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "14.16.1"
+  },
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
